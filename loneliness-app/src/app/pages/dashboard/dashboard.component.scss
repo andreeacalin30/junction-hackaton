@@ -1,0 +1,67 @@
+@import '../../../styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&family=Dosis&family=Fjalla+One&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+
+
+.header{
+    float: right;
+}
+
+.dashboard-container{
+    margin-top: 3%;
+}
+.dashboard-box{
+    // margin-left: auto;
+    margin-right: auto;
+    // width: 60%;
+    height: auto;
+    min-height: 500px;
+    border-radius: 6px;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: $light-color;
+}
+
+.catgeories-box{
+    margin-left: 30px;
+    margin-right: auto;
+    // width: 60%;
+    height: auto;
+    min-height: 500px;
+    border-radius: 6px;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: $light-color;
+}
+
+.service-box{
+    margin-top: 2%;
+    margin-left: 4%;
+    background-color: white;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.start-contact-box{
+    margin-top: 2%;
+    margin-left: 4%;
+    background-color: white;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.person-title{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: black;
+    font-size: 3em;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.person-description{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: black;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 15px;
+}

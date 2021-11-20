@@ -40,9 +40,19 @@ checkSize(innerWidth: number){
   public collapse = true;
   public panelOpenState = false;
 
-public lastScrollTop = 0;
-
-  constructor(private router: Router, private authService: AuthService, private cookieService: CookieService) { }
+  public lastScrollTop = 0;
+  public inLoginPage = false;
+  public inUserPages = false;
+  constructor(private router: Router, private authService: AuthService, private cookieService: CookieService) {
+    if(this.router.url ==='/admin-login'){
+      this.inLoginPage = true;
+      console.log(this.router.url)  
+      this.inUserPages = false;
+    } else {
+      this.inLoginPage = false;
+      this.inUserPages = true;
+    }
+    }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
@@ -56,7 +66,7 @@ public lastScrollTop = 0;
   }
 
   goToHomePage(event:any){
-    this.router.navigateByUrl('/home-page');
+    this.router.navigateByUrl('/welcome-page');
   }
 
   goToOurCompany(event:any){
@@ -70,6 +80,7 @@ public lastScrollTop = 0;
   goToLogin(event:any){
     console.log('Login')
     this.router.navigateByUrl('/admin-login');
+   
   }
 
   signOut(event:any){

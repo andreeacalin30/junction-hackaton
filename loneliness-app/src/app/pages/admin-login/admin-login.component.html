@@ -8,12 +8,12 @@
             </div>
 
             <div class="login-title">
-              Affiliate Sales
+              Admin Log In
             </div>
             <form  class="form-position col-md-12" [formGroup]="loginForm">
                 <mat-form-field class="input-field col-md-6" >
                     <input type="email" matInput required formControlName="email">
-                    <mat-label> E-mail
+                    <mat-label> Username
                     </mat-label>
                 </mat-form-field>
                 <mat-form-field class="input-field col-md-6" >
@@ -21,7 +21,7 @@
                     <mat-label> Password
                     </mat-label>
                 </mat-form-field>
-                <div class="col-md-8 div-button">
+                <div class="div-button">
                   <button mat-raised-button class="login-btn" type="submit" (click)="loginUser($event)">
                     <div class="login-btn-txt">
                       Log In

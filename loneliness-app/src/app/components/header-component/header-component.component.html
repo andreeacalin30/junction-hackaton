@@ -3,7 +3,7 @@
         <div class="inline-element " style="margin-left: 2rem;" (click)="goToHomePage($event)">
             LOGO
         </div>
-        <div class="inline-element " style="margin-left: 2rem;" (click)="goToLogin($event)">
+        <div *ngIf="!inLoginPage" class="inline-element " style="margin-left: 2rem;" (click)="goToLogin($event)">
             LOG IN
         </div>
         <!-- <div style="float: right; margin-right: 5rem;">
@@ -20,6 +20,9 @@
                 HELP
             </div>
         </div> -->
+        <div *ngIf="inUserPages" class="inline-element" style="float: right; margin-right: 10rem;" (click)="goToHomePage($event)">
+            LOG OUT
+        </div>
     </div>
     <!-- <div  *ngIf="isMobileResolution" class="mobile-header">
          <mat-accordion>

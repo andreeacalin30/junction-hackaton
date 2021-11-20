@@ -1,0 +1,55 @@
+<div class="header-div">
+    <div *ngIf="!isMobileResolution" class="col-sm-12 web-page-header">
+        <div class="inline-element " style="margin-left: 2rem;" (click)="goToHomePage($event)">
+            LOGO
+        </div>
+        <div class="inline-element " style="margin-left: 2rem;" (click)="goToLogin($event)">
+            LOG IN
+        </div>
+        <!-- <div style="float: right; margin-right: 5rem;">
+            <div class="inline-element" style="margin-left: 1rem;" (click)="goToOurCompany($event)">
+                OUR COMPANY
+            </div>
+            <div class="inline-element" style="margin-left: 2rem;"  (click)="goToLogin($event)">
+                LOG IN
+            </div>
+            <div class="inline-element " style="margin-left: 2rem;" (click)="goToNewAccount($event)">
+                NEW ACCOUNT
+            </div>
+            <div class="inline-element" style="margin-left: 2rem; "  (click)="signOut($event)">
+                HELP
+            </div>
+        </div> -->
+    </div>
+    <!-- <div  *ngIf="isMobileResolution" class="mobile-header">
+         <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false"
+                                 class="panel-container"  hideToggle="true">
+              <mat-expansion-panel-header>
+                    <mat-panel-title>
+                          <i class="material-icons menu-icon">menu</i>
+                    </mat-panel-title>
+                    <div class="inline-element " style="margin-right: 2rem; margin-top: auto;
+                                                        margin-bottom: auto;">
+                        Logo
+                    </div>
+              </mat-expansion-panel-header>
+              <ul class="menu-list">
+                  <li class="menu-item-mobile" (click)="goToOurCompany($event)">
+                    OUR COMPANY
+                  </li>
+                  <li class="menu-item-mobile" (click)="goToLogin($event)">
+                    LOG IN
+                </li>
+                <li class="menu-item-mobile" (click)="goToNewAccount($event)">
+                    NEW ACCOUNT
+                </li>
+                <li class="menu-item-mobile"  (click)="signOut($event)">
+                    HELP
+                </li>
+              </ul>
+            </mat-expansion-panel>  
+        </mat-accordion>
+    </div> -->
+</div>

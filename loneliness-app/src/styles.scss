@@ -1,0 +1,10 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-form-field-flex{
+    min-width: 230px!important;
+    max-width: 400px!important;
+}
+
+$light-color: #DFE8F1;
+$dark-color: rgb(12,158,163);

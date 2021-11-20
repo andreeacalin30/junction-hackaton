@@ -5,14 +5,11 @@ import { AuthService } from 'src/app/services/aws-services/security/auth.service
 import { SessionService } from 'src/app/services/aws-services/session-service.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-elder-services',
+  templateUrl: './elder-services.component.html',
+  styleUrls: ['./elder-services.component.scss']
 })
-
-
-
-export class DashboardComponent implements OnInit {
+export class ElderServicesComponent implements OnInit {
   public citizensList =[{
     name: 'Granny 1',
     interests: 'asdalskdmas'
@@ -81,7 +78,7 @@ export class DashboardComponent implements OnInit {
     }
     
   }
+  ngOnInit(): void {
+  }
 
-
-  ngOnInit(){}
 }

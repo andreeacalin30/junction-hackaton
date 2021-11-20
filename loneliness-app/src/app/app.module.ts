@@ -26,6 +26,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { JwPaginationModule } from 'jw-angular-pagination';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ElderServicesComponent } from './pages/elder-services/elder-services.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     LoginPageComponent,
     SignupPageComponent,
     AdminLoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ElderServicesComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { JwPaginationModule } from 'jw-angular-pagination';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ElderServicesComponent } from './pages/elder-services/elder-services.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { JwPaginationModule } from 'jw-angular-pagination';
     HomePageComponent,
     LoginPageComponent,
     SignupPageComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    DashboardComponent,
+    ElderServicesComponent
   ],
   imports: [
     BrowserModule,

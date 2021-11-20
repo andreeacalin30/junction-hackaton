@@ -5,11 +5,29 @@ import { AuthService } from 'src/app/services/aws-services/security/auth.service
 import { SessionService } from 'src/app/services/aws-services/session-service.service';
 
 @Component({
-  selector: 'app-admin-login',
-  templateUrl: './admin-login.component.html',
-  styleUrls: ['./admin-login.component.scss']
+  selector: 'app-elder-services',
+  templateUrl: './elder-services.component.html',
+  styleUrls: ['./elder-services.component.scss']
 })
-export class AdminLoginComponent implements OnInit {
+export class ElderServicesComponent implements OnInit {
+  public citizensList =[{
+    name: 'Granny 1',
+    interests: 'asdalskdmas'
+  },
+  {
+    name: 'Granny 1',
+    interests: 'asdalskdmas'
+  },
+  {
+    name: 'Granny 1',
+    interests: 'asdalskdmas'
+  },
+  {
+    name: 'Granny 1',
+    interests: 'asdalskdmas'
+  }]
+
+
   @HostListener('window:scroll') 
   onScroll(e: Event): void {
     console.log('position')
@@ -45,16 +63,6 @@ export class AdminLoginComponent implements OnInit {
     return (e.target as Element).scrollTop;
   }
 
-  loginUser(event: any){
-    let username = this.loginForm.get('email')?.value;
-    let password = this.loginForm.get('password')?.value;
-    let result = this.authService.signIn(username, password);
-    this.router.navigateByUrl('/dashboard');
-    // console.log('New pass required? ', this.authService.newPassRequired);
-  }
-
-  ngOnInit(): void { }
-
   onWindowScroll(event:any) {
     let header_element = document.querySelector('.header-div') as HTMLElement;
     if(this.isMobileResolution==false){
@@ -70,6 +78,7 @@ export class AdminLoginComponent implements OnInit {
     }
     
   }
-
+  ngOnInit(): void {
+  }
 
 }

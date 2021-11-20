@@ -1,0 +1,116 @@
+@import '../../../styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&family=Dosis&family=Fjalla+One&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+
+.buttons-text{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.starting-button{
+    background-color: $dark-color;
+    height: 120px;
+    border-radius: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:5rem;
+    cursor: pointer;
+}
+
+.edit-button{
+    background-color: $dark-color;
+    height: 60px;
+    border-radius: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:5rem;
+    cursor: pointer;
+}
+
+
+.header{
+    height: 200px;
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 100rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.logo{
+    height: 200px;
+    float: left;
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.dashboard-container{
+    margin-top: 3%;
+}
+.dashboard-box{
+    margin-left: auto;
+    margin-right: auto;
+    // width: 60%;
+    height: auto;
+    max-height: auto;
+    border-radius: 6px;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: $light-color;
+    // overflow-y: scroll;
+}
+
+.catgeories-box{
+    margin-left: 30px;
+    margin-right: auto;
+    // width: 60%;
+    height: auto;
+    min-height: 500px;
+    border-radius: 6px;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: $light-color;
+}
+
+.service-box{
+    margin-top: 2%;
+    margin-left: 4%;
+    background-color: white;
+    height: 260px;
+    border-radius: 10px;
+}
+
+.start-contact-box{
+    margin-top: 2%;
+    margin-left: 4%;
+    background-color: $light-color;
+    height: 260px;
+    border-radius: 10px;
+}
+
+.person-title{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: black;
+    font-size: 3em;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.person-description{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: black;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 15px;
+}

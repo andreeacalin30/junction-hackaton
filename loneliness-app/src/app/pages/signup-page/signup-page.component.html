@@ -1,0 +1,63 @@
+<div class="login-page"  (scroll)="onWindowScroll($event)">
+    <app-header></app-header>
+
+    <div class="login-container col-md-12">
+        <div class="login-box col-md-8">
+            <div class="login-box-ribbon">
+               
+            </div>
+
+            <div class="login-title">
+              Affiliate Sales SIGN UP
+            </div>
+            <form  class="form-position" [formGroup]="signupForm">
+                <div class="row col-md-12">
+                    <mat-form-field class="input-field col-md-5" >
+                        <input type="text" matInput required formControlName="firstName">
+                        <mat-label> First Name
+                        </mat-label>
+                    </mat-form-field>
+                    <mat-form-field class="input-field col-md-5" >
+                        <input type="text" matInput required formControlName="lastName">
+                        <mat-label> Last Name
+                        </mat-label>
+                    </mat-form-field>                
+                </div>
+                <div class="row col-md-12">
+                    <mat-form-field class="input-field col-md-5" >
+                        <input type="email" matInput required formControlName="email">
+                        <mat-label> E-mail
+                        </mat-label>
+                    </mat-form-field>
+                    <mat-form-field class="input-field col-md-5" >
+                        <input type="tel" matInput required formControlName="phone">
+                        <mat-label> Phone Number
+                        </mat-label>
+                    </mat-form-field>
+                    
+
+                </div>
+                <div class="row col-md-12">
+                    <mat-form-field class="input-field col-md-5" >
+                        <input type="text" matInput required formControlName="accountType">
+                        <mat-label> Account type
+                        </mat-label>
+                    </mat-form-field>
+                    <mat-form-field class="input-field col-md-5" >
+                        <input type="password" matInput required formControlName="password">
+                        <mat-label> Temporary Password
+                        </mat-label>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-8 div-button">
+                  <button mat-raised-button class="login-btn" type="submit" (click)="signupUser($event)">
+                    <div class="login-btn-txt">
+                      Sign up
+                    </div></button>
+                </div>
+            </form>
+        </div>
+       
+    </div>
+    <app-footer></app-footer>
+</div>

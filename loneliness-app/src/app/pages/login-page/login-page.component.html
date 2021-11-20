@@ -1,0 +1,35 @@
+<div class="login-page"  (scroll)="onWindowScroll($event)">
+    <app-header></app-header>
+
+    <div *ngIf="!authService.newPassRequired" class="login-container col-md-12">
+        <div class="login-box col-md-5">
+            <div class="login-box-ribbon">
+               
+            </div>
+
+            <div class="login-title">
+              Affiliate Sales
+            </div>
+            <form  class="form-position col-md-12" [formGroup]="loginForm">
+                <mat-form-field class="input-field col-md-6" >
+                    <input type="email" matInput required formControlName="email">
+                    <mat-label> E-mail
+                    </mat-label>
+                </mat-form-field>
+                <mat-form-field class="input-field col-md-6" >
+                    <input type="password" matInput required formControlName="password">
+                    <mat-label> Password
+                    </mat-label>
+                </mat-form-field>
+                <div class="col-md-8 div-button">
+                  <button mat-raised-button class="login-btn" type="submit" (click)="loginUser($event)">
+                    <div class="login-btn-txt">
+                      Log In
+                    </div></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <app-confirm-code *ngIf="authService.newPassRequired"></app-confirm-code> -->
+    <app-footer ></app-footer>
+</div>

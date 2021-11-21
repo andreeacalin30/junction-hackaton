@@ -1,11 +1,11 @@
 <div class="header-div">
     <div *ngIf="!isMobileResolution" class="col-sm-12 web-page-header">
         <div class="inline-element " style="margin-left: 2rem;" (click)="goToHomePage($event)">
-            LOGO
+            <img style="width: 110px; " src="../../../assets/Senircraftlogo-removebg-preview.png"/>
         </div>
-        <div *ngIf="!inLoginPage" class="inline-element " style="margin-left: 2rem;" (click)="goToLogin($event)">
+        <!-- <div *ngIf="!inLoginPage" class="inline-element " style="margin-left: 2rem;" (click)="goToLogin($event)">
             LOG IN
-        </div>
+        </div> -->
         <!-- <div style="float: right; margin-right: 5rem;">
             <div class="inline-element" style="margin-left: 1rem;" (click)="goToOurCompany($event)">
                 OUR COMPANY
@@ -20,7 +20,10 @@
                 HELP
             </div>
         </div> -->
-        <div *ngIf="inUserPages" class="inline-element" style="float: right; margin-right: 10rem;" (click)="goToHomePage($event)">
+        <div *ngIf="!inLoginPage" class="inline-element " style="float: right; margin-right: 10rem;" (click)="goToLogin($event)">
+            LOG IN
+        </div>
+        <div *ngIf="!inUserPages" class="inline-element" style="float: right; margin-right: 10rem;" (click)="goToHomePage($event)">
             LOG OUT
         </div>
     </div>

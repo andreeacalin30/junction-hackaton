@@ -1,0 +1,60 @@
+@import '../../../styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&family=Dosis&family=Fjalla+One&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+
+.image-object{
+    position: relative;
+   width: 400px;
+   margin-left: 5em;
+   margin-top: 15em;
+   border-radius: 3px;
+}
+.description-content{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: black;
+    font-size: 1.5em;
+    margin-left: 10em;
+    margin-top: 2em;
+}
+
+.info-container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description-title{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: black;
+    font-size: 2.5em;
+    margin-left: 6em;
+    margin-top: 5em;
+}
+
+.side-wallpaper-left, .side-wallpaper-right{
+    background-image: url('../../../assets/green.jpg ');
+    width: 10%;
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.side-wallpaper-left{
+    left: 0;
+    
+}
+
+.side-wallpaper-right{
+    right: 0;
+    
+}

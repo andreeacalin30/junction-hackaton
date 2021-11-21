@@ -2,27 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&family=Dosis&family=Fjalla+One&family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
 
-.header-div{
-    background-color: $light-color;
-}
-
-mat-form-field label {
-    font-size: 40px!important;
-}
 
 .skills-chip{
     margin-top: 2em;
-    margin-left: 3em;
+    margin-left: 5em;
 }
 
 
 .image-object{
     position: relative;
    width: 200px;
-   height: 200px;
-   margin-left: 20em;
-   margin-top: 2em;
-   border-radius: 50%;
+   margin-left: 15em;
+   margin-top: 4em;
+   border-radius: 3px;
 }
 
 .image-object img{
@@ -63,7 +55,6 @@ mat-form-field label {
     cursor: pointer;
 }
 
-
 .header{
     height: 200px;
     font-family: 'Bebas Neue', cursive;
@@ -82,6 +73,7 @@ mat-form-field label {
     margin-top: 2rem;
     font-size: 2rem;
 }
+
 
 .dashboard-container{
     margin-top: 3%;
@@ -129,18 +121,23 @@ mat-form-field label {
     border-radius: 10px;
 }
 
-.person-title{
+.event-title{
     font-family: 'Baloo Chettan 2', cursive;
     color: black;
     font-size: 2.5em;
     text-align: left;
-    margin-left: 1em;
+    margin-left: 2em;
+    margin-top: 4%;
 }
 
-.person-description{
+.event-description{
     font-family: 'Baloo Chettan 2', cursive;
     color: black;
-    font-size: 1em;
+    font-size: 1.5em;
     text-align: left;
     margin-left: 3em;
+}
+
+.header-div{
+    background-color: $light-color;
 }

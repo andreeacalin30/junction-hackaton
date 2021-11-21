@@ -27,6 +27,15 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { JwPaginationModule } from 'jw-angular-pagination';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ElderServicesComponent } from './pages/elder-services/elder-services.component';
+import { EventListComponent } from './pages/event-list/event-list.component';
+import {MatChipsModule} from '@angular/material/chips';
+import { ContactSeniorComponent } from './pages/contact-senior/contact-senior.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { EventDescriptionComponent } from './pages/event-description/event-description.component';
+import { RatingModule } from 'ng-starrating';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RegistrationFormComponent } from './pages/registration-form/registration-form.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -40,7 +49,12 @@ import { ElderServicesComponent } from './pages/elder-services/elder-services.co
     SignupPageComponent,
     AdminLoginComponent,
     DashboardComponent,
-    ElderServicesComponent
+    ElderServicesComponent,
+    EventListComponent,
+    ContactSeniorComponent,
+    UserProfileComponent,
+    EventDescriptionComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -54,18 +68,23 @@ import { ElderServicesComponent } from './pages/elder-services/elder-services.co
     MatIconModule,
     MDBBootstrapModule,
     MatFormFieldModule,
-    MatInputModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     MatTabsModule,
     MatSelectModule,
     AmplifyUIAngularModule,
-    JwPaginationModule
+    JwPaginationModule,
+    MatChipsModule,
+    RatingModule,
+    NgbModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas:  [CUSTOM_ELEMENTS_SCHEMA,
-    NO_ERRORS_SCHEMA]
+    NO_ERRORS_SCHEMA],
+    exports: [ MatFormFieldModule, MatInputModule ]
+    
 })
 export class AppModule { }

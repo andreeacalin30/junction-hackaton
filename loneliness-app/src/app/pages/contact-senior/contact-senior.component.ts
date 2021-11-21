@@ -33,5 +33,9 @@ export class ContactSeniorComponent implements OnInit {
     // console.log('New pass required? ', this.authService.newPassRequired);
   }
 
+  goToHomePage(){
+    this.router.navigateByUrl('/welcome-page');
+  }
+
   ngOnInit(): void { }
 }

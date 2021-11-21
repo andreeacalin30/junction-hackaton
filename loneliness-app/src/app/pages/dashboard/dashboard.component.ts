@@ -14,26 +14,26 @@ import { SessionService } from 'src/app/services/aws-services/session-service.se
 
 export class DashboardComponent implements OnInit {
   public citizensList =[{
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+    name: 'Isabela Minerva',
+    interests: 'I have been a French teacher for the past 40 years and I would like to find some children to which I can teach this wonderful language',
+    skills: ['French', 'Reading'],
+    photo: "../../../assets/old-lady.jpg"
   },
   {
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
-  },
-  {
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
-  },
-  {
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+    name: 'Maskic Aston',
+    interests: 'I have always been good at piano, it was my lifetime passion and refugee.',
+    skills: ['Piano lessons', 'Cooking lessons'],
+    photo: "../../../assets/old-man.jpg"
   }]
 
   gotToDashboard(){
     
       this.router.navigateByUrl('/registration-form');
     
+  }
+
+  goToHomePage(){
+    this.router.navigateByUrl('/welcome-page');
   }
   @HostListener('window:scroll') 
   onScroll(e: Event): void {

@@ -11,10 +11,22 @@ import { SessionService } from 'src/app/services/aws-services/session-service.se
 })
 export class RegistrationFormComponent implements OnInit {
   // public contactForm:FormGroup;
+  
+  availList =[
+    {value: 'Availability'},
+    {value: 'Once a week'},
+    {value: 'Twice a week'},
+    {value: 'Twice a month'}
+  ]
+  paidOption =[
+    {value: 'Paid'},
+    {value: 'Not Paid'},
+  ]
+
   freqList =[
+    {value: 'Requency of contact'},
     {value: 'Once a week'},
     {value: 'Twice a week'}
-   
   ]
   constructor(private formBuilder: FormBuilder, private router: Router, public  authService: AuthService, public sessionService: SessionService) { 
     // this.contactForm = this.formBuilder.group({
@@ -35,6 +47,10 @@ export class RegistrationFormComponent implements OnInit {
 
   getYPosition(e: Event): number {
     return (e.target as Element).scrollTop;
+  }
+
+  goToHomePage(){
+    this.router.navigateByUrl('/welcome-page');
   }
 
   loginUser(event: any){

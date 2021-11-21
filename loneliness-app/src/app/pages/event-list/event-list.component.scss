@@ -1,7 +1,25 @@
 @import '../../../styles.scss';
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&family=Dosis&family=Fjalla+One&family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
-
+.background{
+    background-image: url('../../../assets/plain-blue.jpg');
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
 
 .skills-chip{
     margin-top: 2em;

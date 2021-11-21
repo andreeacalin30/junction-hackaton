@@ -1,13 +1,19 @@
-<div class="d-flex">
+<div class="background">
+
+
+<div class="d-flex header-div">
     <div class="logo">
-        LOGO
+        <div class="inline-element " style="cursor: pointer;" (click)="goToHomePage()">
+            <img style="width: 110px; " src="../../../assets/Senircraftlogo-removebg-preview.png"/>
+        </div>
     </div>
+
     <div class="header">
         LOGOUT
     </div>
 </div>
-
-
+<!-- <div class="side-wallpaper-left">
+</div> -->
 <div class="starting-button col-md-3">
     <div class="buttons-text" (click)="gotToDashboard()">
      Register an Elder
@@ -26,7 +32,7 @@
                     {{citizen.name}}
                 </div>
                 <div class="person-description">
-                    Description
+                    {{citizen.interests}}
                 </div>
             </div>
             <div class="start-contact-box col-md-3">
@@ -38,7 +44,10 @@
         
     </div>
 </div>
-
+<!-- <div class="side-wallpaper-right">
+</div> -->
 <div style="height: 150px;">
+
+</div>
 
 </div>

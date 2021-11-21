@@ -29,7 +29,7 @@ export class ContactSeniorComponent implements OnInit {
     // let username = this.loginForm.get('email')?.value;
     // let password = this.loginForm.get('password')?.value;
     // let result = this.authService.signIn(username, password);
-    // this.router.navigateByUrl('/dashboard');
+    this.router.navigateByUrl('/elder-services');
     // console.log('New pass required? ', this.authService.newPassRequired);
   }
 

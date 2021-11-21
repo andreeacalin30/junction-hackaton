@@ -1,6 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+@import '~bootstrap/scss/bootstrap';
 .mat-form-field-flex{
     min-width: 230px!important;
     max-width: 400px!important;
@@ -8,3 +8,18 @@
 
 $light-color: #DFE8F1;
 $dark-color: rgb(12,158,163);
+
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: red!important;
+}
+
+.mat-form-field-label-wrapper{
+    color: red!important;
+}
+
+.mat-form-field-label-wrapper:focus{
+    color: red!important;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

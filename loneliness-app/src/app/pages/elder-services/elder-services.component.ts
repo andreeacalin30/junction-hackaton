@@ -11,23 +11,29 @@ import { SessionService } from 'src/app/services/aws-services/session-service.se
 })
 export class ElderServicesComponent implements OnInit {
   public citizensList =[{
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+    name: 'Isabela Minerva',
+    interests: 'I have been a French teacher for the past 40 years and I would like to find some children to which I can teach this wonderful language',
+    skills: ['French', 'Reading'],
+    photo: "../../../assets/old-lady.jpg"
+  },
+  {
+    name: 'Maskic Aston',
+    interests: 'I have always been good at piano, it was my lifetime passion and refugee.',
+    skills: ['Piano lessons', 'Cooking lessons'],
+    photo: "../../../assets/old-man.jpg"
   },
   {
     name: 'Granny 1',
-    interests: 'asdalskdmas'
+    interests: 'asdalskdmas',
+    skills: ['Piano lessons', 'BabySitting']
   },
   {
     name: 'Granny 1',
-    interests: 'asdalskdmas'
-  },
-  {
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+    interests: 'asdalskdmas',
+    skills: ['Coummunity service']
   }]
 
-
+  removable = true;
   @HostListener('window:scroll') 
   onScroll(e: Event): void {
     console.log('position')
@@ -40,6 +46,11 @@ export class ElderServicesComponent implements OnInit {
     this.innerWidth = window.innerWidth;
     this.checkSize(this.innerWidth);
   }
+
+  goToContact(){
+    
+    this.router.navigateByUrl('/user-description');
+  }
   public isMobileResolution = false;
   public innerWidth: any;
   public lastScrollTop = 0;
@@ -49,6 +60,10 @@ export class ElderServicesComponent implements OnInit {
       email: [''],
       password: ['']
     });
+  }
+
+  goToHomePage(){
+    this.router.navigateByUrl('/welcome-page');
   }
 
   checkSize(innerWidth: number){

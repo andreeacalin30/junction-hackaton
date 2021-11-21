@@ -1,0 +1,35 @@
+<div class="col-md-12 info-container">
+    <div class="side-wallpaper-left col-md-1">
+        <img (click)="goToHomePage()"style="cursor: pointer; width: 110px; margin-top: 10px; margin-left: 20px; " src="../../../assets/Senircraftlogo-removebg-preview.png"/>
+    </div>
+    <div class="col-md-10 d-flex">
+        <div class="col-md-8">
+            <div class="description-title">
+                {{citizensList[0].name}}
+            </div>
+            <div class="description-content">
+                {{citizensList[0].description}}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="description-picture">
+                <img class="image-object" src={{citizensList[0].photo}}>
+            </div>
+            <div>
+                <div class="description-rating">
+                   Rating
+                </div>
+                <ngb-rating [rate]="citizensList[0].rating"  class="star-rating"></ngb-rating>
+            </div>
+            <div class="starting-button col-sm-5">
+                <div class="buttons-text" (click)="goToContact()">
+                 Contact
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="side-wallpaper-right  col-md-1">
+
+    </div>
+</div>

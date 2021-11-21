@@ -1,0 +1,61 @@
+    <div *ngIf="!authService.newPassRequired" class="login-container col-md-12">
+        <div class="side-wallpaper-left">
+
+        </div>
+        <div class="login-box col-md-9">
+            <div class="login-box-ribbon">  
+            </div>
+            <div class="login-title">
+              Ask for Senior Citizen Service
+            </div>
+            <form [formGroup]="contactForm">
+                <div class="row"  >
+                    <div  class="col-md-12 ml-4"  style="margin-top: 60px;">
+                        <mat-form-field class="input-field col-md-5 "  style="margin-left: 50px;">
+                            <input type="text" matInput required formControlName="lastName">
+                            <mat-label> Last Name
+                            </mat-label>
+                        </mat-form-field>
+                        <mat-form-field class="input-field col-md-5"   style="margin-left: 30px;">
+                            <input type="text" matInput required formControlName="firstName">
+                            <mat-label> First Name
+                            </mat-label>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12"  style="margin-top: 60px;">
+                        <mat-form-field class="input-field col-md-5" style="margin-left: 50px;">
+                            <input type="tel" matInput required formControlName="phone">
+                            <mat-label> Phone Number
+                            </mat-label>
+                        </mat-form-field>
+                        <mat-form-field class="input-field col-md-5"  style="margin-left: 30px;">
+                            <input type="date" matInput required formControlName="date">
+                            <mat-label> When can you be contacted
+                            </mat-label>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12"  style="margin-top: 60px;">
+                        <mat-form-field class="input-field col-md-8"   style="margin-left: 13%;">
+                            <input type="text" matInput required formControlName="shortMessage">
+                            <mat-label> Short Message
+                            </mat-label>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="div-button">
+                  <button mat-raised-button class="login-btn" type="submit" (click)="loginUser($event)">
+                    <div class="login-btn-txt">
+                      Send message
+                    </div></button>
+                </div>
+                <div style="height: 50px;">
+
+                </div>
+            </form>
+           
+        </div>
+        <div class="side-wallpaper-right" style="float:right">
+
+        </div>
+    </div>
+<!-- <app-footer ></app-footer> -->

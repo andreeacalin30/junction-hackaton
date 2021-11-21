@@ -33,6 +33,15 @@ export class AdminLoginComponent implements OnInit {
     });
   }
 
+  gotToDashboard(){
+    let username = this.loginForm.get('email')?.value;
+    let password = this.loginForm.get('password')?.value;
+    if(this.loginForm.valid){
+      this.router.navigateByUrl('/dashboard');
+    }
+  }
+
+
   checkSize(innerWidth: number){
     if (innerWidth < 768) {
       this.isMobileResolution = true;

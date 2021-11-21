@@ -8,9 +8,9 @@
         LOGOUT
     </div>
 </div>
-<div  style="width: 200px; margin-top: 20px; margin-left:auto; margin-right: auto;">
+<div  style="width: 200px; margin-left:auto; margin-right: auto;">
     <mat-form-field style="width:300px; ">
-        <input type="text" matInput placeholder="Search for services"
+        <input type="text" matInput placeholder="Search for events"
         style="width: 260px;">
         <span class="material-icons">
             search
@@ -19,31 +19,22 @@
 </div>
 <div  class="dashboard-container col-md-12 d-flex">
     <div class="dashboard-box col-md-10 ">
-        <div style="margin-bottom: 50px;" *ngFor="let citizen of citizensList" class="d-flex">
+        <div style="margin-bottom: 50px;" *ngFor="let event of eventsList" class="d-flex">
             <div class="service-box col-md-8 d-flex" >
-                <div style="display: block; cursor:pointer" (click)=goToContact()>
-                    <div class="person-title">
-                        {{citizen.name}}
+                <div style="display: block; cursor: pointer;" (click)=goToEvent()>
+                    <div class="event-title">
+                        {{event.name}}
                     </div>
-                    <div class="person-description">
-                        {{citizen.interests}}
+                    <div class="event-description">
+                        {{event.description}}
                     </div>
-                    <div class="skills-chip">
-                        <mat-chip-list>
-                        <mat-chip
-                            class="example-box"
-                            cdkDrag
-                            *ngFor="let skill of citizen.skills">
-                            {{skill}}
-                        </mat-chip>
-                </mat-chip-list>
-                    </div>
-                    
+                    <div class="event-description">
+                        {{event.time}}
+                    </div>                    
                 </div>
                 <div>
-                    <img class="image-object" src={{citizen.photo}}>
+                    <img class="image-object" src={{event.photo}}>
                 </div>
-               
             </div>
             <!-- <div class="start-contact-box col-md-3">
                 <div class="edit-button col-sm-5">

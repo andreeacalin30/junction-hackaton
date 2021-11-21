@@ -1,40 +1,40 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/aws-services/security/auth.service';
 import { SessionService } from 'src/app/services/aws-services/session-service.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-event-list',
+  templateUrl: './event-list.component.html',
+  styleUrls: ['./event-list.component.scss']
 })
-
-
-
-export class DashboardComponent implements OnInit {
-  public citizensList =[{
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+export class EventListComponent implements OnInit {
+  public eventsList =[{
+    name: 'Festival Finder',
+    description: 'The Finland Festivals site lists what must be every music, film and arts festival in Finland! ',
+    time:'20 Nov 2021, 5pm',
+    photo:"../../../assets/festival.jpg"
   },
   {
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+    name: 'Museot',
+    description: 'This Friday at the chess club there will be a grand 12 play contest between the people registered. ',
+    time:' Time of meeting: 5pm. Places: 23, time:20 Nov 2021, 5pm',
+    photo:"../../../assets/chess.PNG"
   },
   {
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+    name: 'Book release',
+    description: 'Outside gathering',
+    time:'20 Nov 2021, 5pm'
   },
   {
-    name: 'Granny 1',
-    interests: 'asdalskdmas'
+    name: 'Book release',
+    description: 'Outside gathering',
+    time:'20 Nov 2021, 5pm'
   }]
-
-  gotToDashboard(){
-    
-      this.router.navigateByUrl('/registration-form');
-    
+  goToHomePage(){
+    this.router.navigateByUrl('/welcome-page');
   }
+  removable = true;
   @HostListener('window:scroll') 
   onScroll(e: Event): void {
     console.log('position')
@@ -50,12 +50,11 @@ export class DashboardComponent implements OnInit {
   public isMobileResolution = false;
   public innerWidth: any;
   public lastScrollTop = 0;
-  public loginForm:FormGroup;
-  constructor(private formBuilder: FormBuilder, private router: Router, public  authService: AuthService, public sessionService: SessionService) { 
-    this.loginForm = this.formBuilder.group({
-      email: [''],
-      password: ['']
-    });
+  constructor(private router: Router, public  authService: AuthService, public sessionService: SessionService) { 
+  }
+
+  goToEvent(){
+    this.router.navigateByUrl('/event-description');
   }
 
   checkSize(innerWidth: number){
@@ -85,7 +84,7 @@ export class DashboardComponent implements OnInit {
     }
     
   }
+  ngOnInit(): void {
+  }
 
-
-  ngOnInit(){}
 }

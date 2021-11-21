@@ -21,16 +21,6 @@ export class ElderServicesComponent implements OnInit {
     interests: 'I have always been good at piano, it was my lifetime passion and refugee.',
     skills: ['Piano lessons', 'Cooking lessons'],
     photo: "../../../assets/old-man.jpg"
-  },
-  {
-    name: 'Granny 1',
-    interests: 'asdalskdmas',
-    skills: ['Piano lessons', 'BabySitting']
-  },
-  {
-    name: 'Granny 1',
-    interests: 'asdalskdmas',
-    skills: ['Coummunity service']
   }]
 
   removable = true;

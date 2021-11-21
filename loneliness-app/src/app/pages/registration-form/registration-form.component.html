@@ -1,112 +1,81 @@
 <div *ngIf="!authService.newPassRequired" class="login-container col-md-12">
     <div class="side-wallpaper-left">
-
     </div>
     <div class="login-box col-md-9">
         <div class="login-box-ribbon">  
         </div>
+        <img (click)="goToHomePage()" style="cursor: pointer; width: 110px; margin-top: 10px; margin-left: 25px; " src="../../../assets/Senircraftlogo-removebg-preview.png"/>
+
         <div class="login-title">
           Ask for Senior Citizen Service
         </div>
         <!-- <form [formGroup]="contactForm"> -->
             <div class="row"  >
-                <div  class="col-md-12 ml-4"  style="margin-top: 60px;">
-                    <mat-form-field class="input-field col-md-5"   style="margin-left: 30px;">
-                        <input type="text" matInput required />
-                        <mat-label> First Name
-                        </mat-label>
-                    </mat-form-field>
-                    <mat-form-field class="input-field col-md-5 "  style="margin-left: 50px;">
-                        <input type="text" matInput required />
-                        <mat-label> Last Name
-                        </mat-label>
-                    </mat-form-field>
+                <div  class="col-md-12 ml-4 d-flex"  style="margin-top: 60px;">
+                    <div class="col-md-3">
+                        <input class="simple-input" type="text"  placeholder="First Name" required />
+                    </div>
+                      
+                    <div class="col-md-3">
+                        <input class="simple-input" type="text"   placeholder="Last Name" matInput required />
+                    </div>
                 </div>
-                <div class="col-md-12"  style="margin-top: 60px;">
-                    <mat-form-field class="input-field col-md-5" style="margin-left: 50px;">
-                        <input type="tel" matInput required />
-                        <mat-label> Phone Number
-                        </mat-label>
-                    </mat-form-field>
-                    <mat-form-field class="input-field col-md-5"  style="margin-left: 30px;">
-                        <input type="date" matInput required/>
-                        <mat-label> Address
-                        </mat-label>
-                    </mat-form-field>
+                <div  class="col-md-12 ml-4 d-flex"  style="margin-top: 60px;">
+                    <div class="col-md-3">
+                        <input class="simple-input" type="text" matInput required  placeholder="Phone Number"/>
+                    </div>
+                      
+                    <div class="col-md-3">
+                        <input class="simple-input" type="text" matInput required  placeholder="Address"/>
+                    </div>
                 </div>
-                <div class="col-md-12"  style="margin-top: 60px;">
-                    <mat-form-field class="input-field col-md-5" style="margin-left: 50px;">
+                <div class="col-md-12"  style="margin-top: 20px;">
+                    <mat-form-field class="input-field col-md-5" style="margin-left: 30px;">
                         <button class="upload-picture">Upload Profile Picture</button>
                     </mat-form-field>
                 </div>
-                <div class="col-md-12"  style="margin-top: 60px;">
-                    <mat-slide-toggle matInput >Citizen offers a service</mat-slide-toggle>
+                <div class="col-md-12"  style="margin-top: 30px;margin-left: 30px;">
+                    <input type="checkbox" checked data-toggle="toggle" data-size="sm" >
+                    Citizen offers a service
                 </div>
-                <div class="col-md-12"  style="margin-top: 60px;">
-                    <mat-form-field class="input-field col-md-8"   style="margin-left: 13%;">
-                        <input type="text" matInput required />
-                        <mat-label> Title of Service
-                        </mat-label>
-                    </mat-form-field>
-                    <mat-form-field class="input-field col-md-3"   style="margin-left: 13%;">
-                        <mat-select >
-                            <mat-option *ngFor="let freq of freqList" [value]="freq.value">
-                                {{freq.value}}
-                          </mat-option>
-                          </mat-select>
-                    </mat-form-field>
+                <div class="col-md-12 d-flex"  style="margin-top: 30px;margin-left: 20px;">
+                    <div class="col-md-4">
+                        <input class="simple-input" type="text"  required placeholder="Title of Service"/>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="select-class" name="cars" id="cars">
+                            <option  *ngFor="let freq of availList" [value]="freq.value">{{freq.value}}</option>
+                          </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select  class="select-class" name="cars" id="cars">
+                            <option  *ngFor="let freq of paidOption" [value]="freq.value">{{freq.value}}</option>
+                          </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input class="simple-input" type="number"  required placeholder="Service price"/>
+                    </div>
                 </div>
-                <div class="col-md-12"  style="margin-top: 60px;">
-                    <mat-form-field class="input-field col-md-5"   style="margin-left: 13%;">
-                        <textarea matInput id="w3review" name="w3review" rows="4" cols="50" >
-                            At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
-                            </textarea>
-                            <br><br>
-                        <input type="submit" value="Submit">
-                    </mat-form-field>
-                    <div  class="input-field col-md-6" style="display:block">
-                        <mat-form-field class="input-field col-md-3"   style="margin-left: 13%;">
-                            <mat-select  >
-                                <mat-option *ngFor="let freq of freqList" [value]="freq.value">
-                                    {{freq.value}}
-                              </mat-option>
-                              </mat-select>
-                        </mat-form-field>
-                        <mat-form-field class="input-field col-md-3"   style="margin-left: 13%;">
-                            <input type="number" matInput required />
-                            <mat-label> Your service price (€)
-                            </mat-label>
-                        </mat-form-field>
-                    </div>
-                    <div class="div-button">
-                        <button mat-raised-button class="login-btn" type="submit" (click)="loginUser($event)">
-                          <div class="login-btn-txt">
-                            Add another service offer
-                          </div></button>
-                    </div>
-                    <div class="col-md-12"  style="margin-top: 60px;">
-                        <mat-slide-toggle >Citizen wants to receive event suggestions</mat-slide-toggle>
-                    </div>
-                    <div class="col-md-12"  style="margin-top: 60px;">
-                        <mat-form-field class="input-field col-md-5"  style="margin-left: 13%;"  >
-                            <textarea matInput id="w3review" name="w3review" rows="4" cols="50">
-                                At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
-                            </textarea>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-md-12"  style="margin-top: 60px;">
-                        <mat-form-field class="input-field col-md-3"   style="margin-left: 13%;">
-                            <mat-select >
-                                <mat-option *ngFor="let freq of freqList" [value]="freq.value">
-                                      {{freq.value}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                        
-                    </div>
-                   
-                    
+
+
+                <div class="col-md-12"  style="margin-top: 30px;margin-left: 30px;">
+                    <input type="checkbox" checked data-toggle="toggle" data-size="sm" >
+                    Citizen wants to receive event suggestions
                 </div>
+
+                <div class="col-md-12"  style="margin-top: 30px;margin-left: 30px;">
+                    <input class="large-input" style="height: 300px;" type="text"  required placeholder="Interested in..."/>
+                </div>
+
+                <div class="col-md-12 d-flex"  style="margin-top: 30px;margin-left: 20px;">
+                    <div class="col-md-3">
+                        <select class="select-class" name="cars" id="cars">
+                            <option  *ngFor="let freq of freqList" [value]="freq.value">{{freq.value}}</option>
+                          </select>
+                    </div>
+
+                </div>
+
             </div>
             <div class="div-button">
               <button mat-raised-button class="login-btn" type="submit" (click)="loginUser($event)">

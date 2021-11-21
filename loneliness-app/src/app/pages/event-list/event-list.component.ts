@@ -16,7 +16,7 @@ export class EventListComponent implements OnInit {
     photo:"../../../assets/festival.jpg"
   },
   {
-    name: 'Museot',
+    name: 'Chess club',
     description: 'This Friday at the chess club there will be a grand 12 play contest between the people registered. ',
     time:' Time of meeting: 5pm. Places: 23, time:20 Nov 2021, 5pm',
     photo:"../../../assets/chess.PNG"

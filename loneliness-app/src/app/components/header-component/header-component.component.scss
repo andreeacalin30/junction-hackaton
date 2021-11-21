@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&family=Dosis&family=Fjalla+One&family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+@import "../../../styles.scss";
 .header-div{
     z-index: 2;
     height: 130px;
@@ -23,7 +24,7 @@
 
     .web-page-header{
         padding-top: 3rem;
-        color: white;
+        color: $dark-color;
        
     }
 
